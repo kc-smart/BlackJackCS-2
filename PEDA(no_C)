@@ -1,0 +1,52 @@
+Problem: Allow a user to play blackjack against the computer.
+
+Examples:
+	Dealer hit 21;
+	player hit 21
+	Dealer bust; 
+	player bust
+	Dealer/player take additional cards (hit) as needed until BlackJack or bust
+
+Data and Algorithm:
+//create deck
+createDeck();
+Card(face, suit);
+
+
+//shuffle deck
+shuffleDeck();
+
+//assign value to cards
+cardValues(face);
+
+//deal cards to dealer and player one
+dealGame();
+dealerHand list;
+playerOneHand list;
+
+
+//calculate each players handTotal
+handTotal(value, dealerHand, playerOneHand);
+
+//offer player one additional cards until hit or bust
+	playerOneHand.add(random);
+
+//dealer take cards based on handTotals
+	if(hand<21 && playerOneHand>hand){
+		dealerHand.add(random);
+	}
+
+
+//determine winner based on handTotal
+winner();
+	if(hand>21){
+		dealerWins!}
+	else if(dealer>playerOneHand){
+		dealerWins!;}
+	else if(dealer==playerOneHand){
+		dealerWins!;}
+	else{
+		playerOneWins!;}
+
+//play again?
+playAgain();
